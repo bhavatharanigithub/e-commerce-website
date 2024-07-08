@@ -1,0 +1,46 @@
+{% extends "amsy/layouts/main.html" %}
+{% block title %}
+    <title>AMSYMART | ONLINE SHOPPING</title>
+{% endblock title %}
+
+{% block content %}
+{% include 'amsy/inc/images.html'%}
+<style>  
+     a.product-link {
+    text-decoration: none;
+    color: inherit; 
+     }
+</style>
+<div class="container" style="margin-top:70px">
+    <div class="row">
+       <div class="col-12">
+           <h1><b style='color: rgb(5, 8, 115);'>TRENDING OFFERS !!!</b></h1>
+       </div>
+       {% for item in products %}
+       <a href="{% url 'product_details' item.category.name item.name %}" class="product-link">
+           <div class="row mb-4 product-row">
+               <div class="col-12">
+                   <div class="card">
+                       <div class="row g-0">
+                           <div class="col-md-4">
+                               <img src="{{ item.product.url }}" class="img-fluid rounded-start" alt="Product Image">  
+                           </div>
+                           <div class="col-md-8">
+                               <div class="card-body">
+                                   <b><h4 class="card-title">{{ item.name }}</h4></b>
+                                   <p class="card-text">
+                                       <b style="font-size: xx-large; font-weight: bold;">&#8377;{{ item.selling_price | stringformat:'d' }}</b> M.R.P: <s>{{ item.original_price | stringformat:'d' }}</s>
+                                   </p>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </a>
+       {% endfor %}
+    </div>
+  </div>
+{% endblock content %}
+
+   

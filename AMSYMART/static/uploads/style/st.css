@@ -1,0 +1,29 @@
+.carousel-item img {
+    margin-top:50px;
+    object-fit: cover;
+    object-position : top;
+    height: 80vh;
+    overflow:visible;
+}
+#carouselExampleCaptions.carousel-item {
+    margin-top: 50px !important;
+  } 
+
+.pic-box {
+    position:relative;
+}  
+.trending{
+    background-color: red;
+    color:bisque;
+    width: 100px;
+    text-align:center;
+    font-weight:bold;
+    display:inline;
+    border-radius:5px;
+    padding:2px;
+    position:absolute;
+    top:0;
+    right:2px;
+    z-index:10;
+
+}  
