@@ -33,7 +33,7 @@ This is a full-stack Django-based e-commerce application with core shopping feat
 | **Framework**    | Django                                     |
 | **Frontend**     | HTML5, CSS3, JavaScript                    |
 | **Styling**      | Bootstrap 5, CSS Modules                   |
-| **Routing**      | Django URLs & Views |
+| **Routing**      | Django URLs & Views                        |
 | **Database**     | MySQL                                      |
 
 ---
